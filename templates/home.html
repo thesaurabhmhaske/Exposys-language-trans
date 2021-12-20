@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Exposys Language Translator</title>
+
+    <!-- add icon link -->
+    <link rel = "icon" href = "/static/img/Logo.png" type = "image/x-icon">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="/static/style1.css">
+
+    <!-- custom js file link  -->
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="/static/main.js"></script>
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header>
+
+    <div class="header-1">
+
+        <a href="#" class="logo"><i class="fa fa-language" aria-hidden="true"></i>Exposys Data Labs</a>
+
+        <form action="" class="search-box-container">
+            <input type="search" id="search-box" placeholder="Search all of Exposys Data Labs...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+    </div>
+
+    <div class="header-2">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Research and Development</a>
+            <a href="#">Careers</a>
+            <a href="#contact">Contact us</a>
+        </nav>
+
+        <div class="icons">
+            <a href="#" class="fas fa-user-circle"></a>
+        </div>
+
+    </div>
+
+</header>
+
+<!-- header section ends -->
+
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="slideshow-container">
+    
+    <div class="mySlides fade">
+    
+      <img src="/static/img/language-1.png" alt="" width="500" height="400" class="rad">
+    
+    </div>
+    
+    <div class="mySlides fade">
+    
+      <img src="/static/img/language-0.1.png" alt="" width="500" height="400" class="rad">
+    
+    </div>
+    
+    <div class="mySlides fade">
+    
+      <img src="/static/img/language-0.png" alt="" width="500" height="400" class="rad">
+    
+    </div>
+    
+    <div class="mySlides fade">
+    
+      <img src="/static/img/language-2.jpg" alt="" width="500" height="400" class="rad">
+    
+    </div>
+    
+    
+    <div class="mySlides fade">
+    
+      <img src="/static/img/language-3.jpg" alt="" width="500" height="400" class="rad">
+    
+    </div>
+    
+    
+    <div class="mySlides fade">
+    
+      <img src="/static/img/language-4.jpg" alt="" width="500" height="400" class="rad">
+    
+    </div>
+    
+    <div class="mySlides fade">
+    
+      <img src="/static/img/language-5.jpg" alt="" width="500" height="400" class="rad">
+    
+    </div>
+    
+    
+    </div>
+    
+    <br>
+    
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+    </div>
+
+<script>
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+</script>
+
+
+    <div class="content">
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exposys Language Translator</span>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;Translate Your Content</h3>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#banner-container" class="btn">get started</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- banner section starts  -->
+
+<section class="banner-container" id="banner-container">
+
+    <div class="banner">
+        <img src="/static/img/Banner-1.png" alt="" class="rad">
+        <div class="content">
+            <h3>Text</h3>
+            <p>Translate Text</p>
+            <a href="#text" class="btn">check out</a>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="/static/img/Banner-2.png" alt="" class="rad">
+        <div class="content">
+            <h3>Document</h3>
+            <p>Translate Document</p>
+            <a href="#doc" class="btn">check out</a>
+        </div>
+    </div>
+
+</section>
+
+<!-- banner section ends -->
+
+
+
+<!-- Text trans section starts  -->
+<section class="text" id="text">
+    <h1 class="heading"> <span>Text</span> Translator </h1>
+    <form class="temp" action="{{ url_for('translate') }}">
+        <div class="inputBox">
+            <select id="source">
+                <option value="en">English</option>
+            </select>
+            <select name="languages" id="destination">
+                <option value="zh-Hans">Chinese</option>
+                <option value="es">Spanish</option>
+                <option value="hi">Hindi</option>
+                <option value="ar">Arabic</option>
+                <option value="ms">Malay</option>
+                <option value="ru">Russian</option>
+                <option value="bn">Bengali</option>
+                <option value="pt">Portuguese</option>
+                <option value="fr">French</option>
+                <option value="ha">Hausa</option>
+                <option value="pan">Panjabi</option>
+                <option value="de">German</option>
+                <option value="ja">Japanese</option>
+                <option value="fa">Persian</option>
+                <option value="sw">Swahili</option>
+                <option value="vi">Vietnamese</option>
+                <option value="te">Telugu</option>
+                <option value="ta">Tamil</option>
+                <option value="it">Italian</option>
+                <option value="jv">Javanese</option>
+                <option value="ko">Korean</option>
+                <option value="mr">Marathi</option>
+                <option value="tr">Turkish</option>
+                <option value="ur">Urdu</option>
+                <option value="gu">Gujarati</option>
+                <option value="ml">Malayalam</option>
+                <option value="kn">Kannada</option>
+                <option value="or">Oriya</option>
+                <option value="bh">Bihari languages</option>
+                <option value="as">Assamese</option>
+                <option value="el">Greek</option>
+                <option value="ne">Nepali</option>
+                <option value="gd">Scottish Gaelic</option>
+                <option value="id">Indonesian</option>
+                <option value="ks">Kashmiri</option>
+                <option value="la">Latin</option>
+                <option value="nl">Dutch</option>
+                <option value="no">Norwegian</option>
+                <option value="sa">Sanskrit</option>
+                <option value="sd">Sindhi</option>
+                <option value="so">Somali</option>
+                
+            </select>
+        </div>
+    <div class="inputBox">
+        <textarea wrap="soft" placeholder="Type here" cols="30" rows="10" id="data" class="txt"></textarea>
+        <textarea wrap="soft" placeholder="Output" cols="30" rows="10" id="output" class="txt">{{prediction}}</textarea>
+
+    </div>
+    
+        <input type="button" class="btn" onclick="inputdata()" value="Translate">
+
+
+    </form>
+
+</section>
+
+<!-- Text trans section ends -->
+<br><br>
+
+
+<!-- doc trans section starts  -->
+
+<section class="doc" id="doc">
+
+    <h1 class="heading"> <span>Document</span> Translator </h1>
+
+    <form id="upload-document-form" name="upload-document-form" action="/app/uploadtotranslationcontainer" method="post" enctype="multipart/form-data" accept-charset="UTF-8" target="autodetectcontainer" class="dropzone">>
+
+        <div class="fallback">
+            <input type="file" id="input-file" name="input-file" value="file" accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.odp,.odt,.ods,.srt,.txt,.pdf" />
+            <input type="submit" value="Upload File!" class="btn">    
+        </div>
+        
+
+    </form>
+
+</section>
+
+<!-- doc trans section starts  -->
+
+<br><br>
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span>contact</span> us... </h1>
+
+    <form action="process.php" method="post">
+
+        <div class="inputBox">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+        </div>
+
+        <div class="inputBox">
+            <input type="number" placeholder="Number" pattern="[0-9]{10}" required>
+            <input type="text" placeholder="Subject" required>
+        </div>
+
+        <textarea placeholder="Message" name="" id="" cols="30" rows="10"></textarea>
+        
+        
+
+        <input type="submit" value="send message" class="btn">
+
+    </form>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- newsletter section starts  -->
+
+<section class="newsletter">
+
+    <h3>subscribe us for latest updates!</h3>
+
+    <form action="process.php" method="post">
+        <input class="box" type="email" placeholder="Enter your Email" >
+        <input type="submit" value="subscribe" class="btn1" name="sub2">
+        
+        
+
+    </form>
+
+</section>
+
+<!-- newsletter section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <a href="#" class="logo"><i class="fa fa-language" aria-hidden="true"></i>Exposys Data Labs</a>
+            <p>Your presence is our confidence!</p>
+            <div class="share">
+                <a href="#" class="btn fab fa-facebook-f"></a>
+                <a href="#" class="btn fab fa-twitter"></a>
+                <a href="#" class="btn fab fa-instagram"></a>
+                <a href="#" class="btn fab fa-linkedin"></a>
+            </div>
+        </div>
+        
+        <div class="box">
+            <h3>our location</h3>
+            <div class="links">
+                <a href="#">banaglore</a>
+                <a href="#">delhi</a>
+                <a href="#">hyderabad</a>
+                <a href="#">mumbai</a>
+                <a href="#">kolkata</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Research and Development</a>
+                <a href="#">Careers</a>
+                <a href="#contact">Contact us</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>speciality</h3>
+            <div class="links">
+                <a href="#">Software Development</a>
+                <a href="#">Web Application Development</a>
+                <a href="#">IT our source Services</a>
+                <a href="#">Internship</a>
+                <a href="#">Training</a>
+            </div>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> designed by <span>Saurabh Mhaske</span> <a href="#" class="logo"><img src="/static/img/Logo.png" alt="" class="delo"></a> | all rights reserved! </h1>
+
+</section>
+
+<!-- footer section ends -->
+
+    
+</body>
+</html>
