@@ -6,7 +6,7 @@ trans = Translator()
 app = Flask(__name__)
 
 @app.route('/')
-def home():
+def index():
     return render_template('home.html')
 
 @app.route('/translate')
@@ -18,9 +18,9 @@ def translate(data, srclang, destlang):
     src = srclang ,
     dest = destlang)
     print(f'{t.origin}->{t.text}')
-    outputText = f'{t.text}'
+    outputText = f'{t.text}'  
+    return render_template('home.html', outputText)    
 
-    return render_template('home.html', prediction=outputText)
 
 if __name__=='__main__':
     app.run(debug=True)
