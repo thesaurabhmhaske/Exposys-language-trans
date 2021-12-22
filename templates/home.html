@@ -13,11 +13,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="/static/style1.css">
+    <link rel="stylesheet" href="/static/css/style1.css">
 
     <!-- custom js file link  -->
-    <script type="text/javascript" src="/eel.js"></script>
-    <script type="text/javascript" src="/static/main.js"></script>
+
 
 </head>
 <body>
@@ -192,63 +191,64 @@ function showSlides() {
 <!-- Text trans section starts  -->
 <section class="text" id="text">
     <h1 class="heading"> <span>Text</span> Translator </h1>
-    <form class="temp">
+    <form class="temp" method="POST" action="/trans">
         <div class="inputBox">
-            <select id="source">
+            <select >
                 <option value="en">English</option>
             </select>
-            <select id="destination">
-                <option value="zh-Hans">Chinese</option>
-                <option value="es">Spanish</option>
-                <option value="hi">Hindi</option>
-                <option value="ar">Arabic</option>
-                <option value="ms">Malay</option>
-                <option value="ru">Russian</option>
-                <option value="bn">Bengali</option>
-                <option value="pt">Portuguese</option>
-                <option value="fr">French</option>
-                <option value="ha">Hausa</option>
-                <option value="pan">Panjabi</option>
-                <option value="de">German</option>
-                <option value="ja">Japanese</option>
-                <option value="fa">Persian</option>
-                <option value="sw">Swahili</option>
-                <option value="vi">Vietnamese</option>
-                <option value="te">Telugu</option>
-                <option value="ta">Tamil</option>
-                <option value="it">Italian</option>
-                <option value="jv">Javanese</option>
-                <option value="ko">Korean</option>
-                <option value="mr">Marathi</option>
-                <option value="tr">Turkish</option>
-                <option value="ur">Urdu</option>
-                <option value="gu">Gujarati</option>
-                <option value="ml">Malayalam</option>
-                <option value="kn">Kannada</option>
-                <option value="or">Oriya</option>
-                <option value="bh">Bihari languages</option>
-                <option value="as">Assamese</option>
-                <option value="el">Greek</option>
-                <option value="ne">Nepali</option>
-                <option value="gd">Scottish Gaelic</option>
-                <option value="id">Indonesian</option>
-                <option value="ks">Kashmiri</option>
-                <option value="la">Latin</option>
-                <option value="nl">Dutch</option>
-                <option value="no">Norwegian</option>
-                <option value="sa">Sanskrit</option>
-                <option value="sd">Sindhi</option>
-                <option value="so">Somali</option>
+            <select class="teamForm" id="teamDropdownSelector" type="text" name="inputvalue" placeholder="Select A Language">
+                <option disabled selected>Select a Language</option>
+                <option  id="WatfordVSManchester Utd" value="zh-cn">chinese</option>
+                <option id="WatfordVSManchester Utd" value="es">Spanish</option>
+                <option id="WatfordVSManchester Utd" value="hi">Hindi</option>
+                <option id="WatfordVSManchester Utd" value="ar">Arabic</option>
+                <option id="WatfordVSManchester Utd" value="ms">Malay</option>
+                <option id="WatfordVSManchester Utd" value="ru">Russian</option>
+                <option id="WatfordVSManchester Utd" value="bn">Bengali</option>
+                <option id="WatfordVSManchester Utd" value="pt">Portuguese</option>
+                <option id="WatfordVSManchester Utd" value="fr">French</option>
+                <option id="WatfordVSManchester Utd" value="ha">Hausa</option>
+                <option id="WatfordVSManchester Utd" value="pan">Panjabi</option>
+                <option id="WatfordVSManchester Utd" value="de">German</option>
+                <option id="WatfordVSManchester Utd" value="ja">Japanese</option>
+                <option id="WatfordVSManchester Utd" value="fa">Persian</option>
+                <option id="WatfordVSManchester Utd" value="sw">Swahili</option>
+                <option id="WatfordVSManchester Utd" value="vi">Vietnamese</option>
+                <option id="WatfordVSManchester Utd" value="te">Telugu</option>
+                <option id="WatfordVSManchester Utd" value="ta">Tamil</option>
+                <option id="WatfordVSManchester Utd" value="it">Italian</option>
+                <option id="WatfordVSManchester Utd" value="jv">Javanese</option>
+                <option id="WatfordVSManchester Utd" value="ko">Korean</option>
+                <option id="WatfordVSManchester Utd" value="mr">Marathi</option>
+                <option id="WatfordVSManchester Utd" value="tr">Turkish</option>
+                <option id="WatfordVSManchester Utd" value="ur">Urdu</option>
+                <option id="WatfordVSManchester Utd" value="gu">Gujarati</option>
+                <option id="WatfordVSManchester Utd" value="ml">Malayalam</option>
+                <option id="WatfordVSManchester Utd" value="kn">Kannada</option>
+                <option id="WatfordVSManchester Utd" value="or">Oriya</option>
+                <option id="WatfordVSManchester Utd" value="bh">Bihari languages</option>
+                <option id="WatfordVSManchester Utd" value="as">Assamese</option>
+                <option id="WatfordVSManchester Utd" value="el">Greek</option>
+                <option id="WatfordVSManchester Utd" value="ne">Nepali</option>
+                <option id="WatfordVSManchester Utd" value="gd">Scottish Gaelic</option>
+                <option id="WatfordVSManchester Utd" value="id">Indonesian</option>
+                <option id="WatfordVSManchester Utd" value="ks">Kashmiri</option>
+                <option id="WatfordVSManchester Utd" value="la">Latin</option>
+                <option id="WatfordVSManchester Utd" value="nl">Dutch</option>
+                <option id="WatfordVSManchester Utd" value="no">Norwegian</option>
+                <option id="WatfordVSManchester Utd" value="sa">Sanskrit</option>
+                <option id="WatfordVSManchester Utd" value="sd">Sindhi</option>
+                <option id="WatfordVSManchester Utd" value="so">Somali</option>
                 
             </select>
         </div>
     <div class="inputBox">
-        <textarea wrap="soft" placeholder="Type here" cols="30" rows="10" id="data" class="txt"></textarea>
-        <textarea wrap="soft" placeholder="Output" cols="30" rows="10" id="output" class="txt"></textarea>
-
+        <textarea wrap="soft" type="text" name="sentence" placeholder="Type here" cols="30" rows="10"  class="txt"></textarea>
+        <textarea  placeholder="Output" cols="30" rows="10"  class="output">{{output}}</textarea>
     </div>
-    
-        <input type="button" class="btn" onclick="inputdata()" value="Translate">
+        <button type="submit" class="btn btn-primary">Translate</button>
+        
+
 
 
     </form>
@@ -287,23 +287,23 @@ function showSlides() {
 
     <h1 class="heading"> <span>contact</span> us... </h1>
 
-    <form action="process.php" method="post">
+    <form action="/contact" method="POST">
 
         <div class="inputBox">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
+            <input type="text" name="name" id="name" placeholder="Your Name" class="form-control" required>
+            <input type="text" name="email" id="email" placeholder="Your Email" class="form-control" required>
         </div>
 
         <div class="inputBox">
-            <input type="number" placeholder="Number" pattern="[0-9]{10}" required>
-            <input type="text" placeholder="Subject" required>
+            <input type="number" name="number" id="number" placeholder="Your Number" class="form-control" pattern="[0-9]{10}" required>
+            <input type="text" name="subject" id="subject" placeholder="Subject" class="form-control" required>
         </div>
 
-        <textarea placeholder="Message" name="" id="" cols="30" rows="10"></textarea>
+        <textarea type="text" name="message" id="message" placeholder="Your Messages" class="msg"></textarea>
         
         
 
-        <input type="submit" value="send message" class="btn">
+        <input type="submit" value="send message" class="btn-login">
 
     </form>
 
@@ -317,7 +317,7 @@ function showSlides() {
 
     <h3>subscribe us for latest updates!</h3>
 
-    <form action="process.php" method="post">
+    <form  method="post">
         <input class="box" type="email" placeholder="Enter your Email" >
         <input type="submit" value="subscribe" class="btn1" name="sub2">
         
