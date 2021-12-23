@@ -208,7 +208,7 @@ function showSlides() {
                 <option id="WatfordVSManchester Utd" value="pt">Portuguese</option>
                 <option id="WatfordVSManchester Utd" value="fr">French</option>
                 <option id="WatfordVSManchester Utd" value="ha">Hausa</option>
-                <option id="WatfordVSManchester Utd" value="pan">Panjabi</option>
+                <option id="WatfordVSManchester Utd" value="pa">Panjabi</option>
                 <option id="WatfordVSManchester Utd" value="de">German</option>
                 <option id="WatfordVSManchester Utd" value="ja">Japanese</option>
                 <option id="WatfordVSManchester Utd" value="fa">Persian</option>
@@ -217,7 +217,6 @@ function showSlides() {
                 <option id="WatfordVSManchester Utd" value="te">Telugu</option>
                 <option id="WatfordVSManchester Utd" value="ta">Tamil</option>
                 <option id="WatfordVSManchester Utd" value="it">Italian</option>
-                <option id="WatfordVSManchester Utd" value="jv">Javanese</option>
                 <option id="WatfordVSManchester Utd" value="ko">Korean</option>
                 <option id="WatfordVSManchester Utd" value="mr">Marathi</option>
                 <option id="WatfordVSManchester Utd" value="tr">Turkish</option>
@@ -226,24 +225,20 @@ function showSlides() {
                 <option id="WatfordVSManchester Utd" value="ml">Malayalam</option>
                 <option id="WatfordVSManchester Utd" value="kn">Kannada</option>
                 <option id="WatfordVSManchester Utd" value="or">Oriya</option>
-                <option id="WatfordVSManchester Utd" value="bh">Bihari languages</option>
-                <option id="WatfordVSManchester Utd" value="as">Assamese</option>
                 <option id="WatfordVSManchester Utd" value="el">Greek</option>
                 <option id="WatfordVSManchester Utd" value="ne">Nepali</option>
                 <option id="WatfordVSManchester Utd" value="gd">Scottish Gaelic</option>
                 <option id="WatfordVSManchester Utd" value="id">Indonesian</option>
-                <option id="WatfordVSManchester Utd" value="ks">Kashmiri</option>
                 <option id="WatfordVSManchester Utd" value="la">Latin</option>
                 <option id="WatfordVSManchester Utd" value="nl">Dutch</option>
                 <option id="WatfordVSManchester Utd" value="no">Norwegian</option>
-                <option id="WatfordVSManchester Utd" value="sa">Sanskrit</option>
                 <option id="WatfordVSManchester Utd" value="sd">Sindhi</option>
                 <option id="WatfordVSManchester Utd" value="so">Somali</option>
                 
             </select>
         </div>
     <div class="inputBox">
-        <textarea wrap="soft" type="text" name="sentence" placeholder="Type here" cols="30" rows="10"  class="txt"></textarea>
+        <textarea wrap="soft" type="text" name="sentence" placeholder="Type here" cols="30" rows="10"  class="txt">{{sentence}}</textarea>
         <textarea  placeholder="Output" cols="30" rows="10"  class="output">{{output}}</textarea>
     </div>
         <button type="submit" class="btn btn-primary">Translate</button>
@@ -261,16 +256,15 @@ function showSlides() {
 
 <!-- doc trans section starts  -->
 
-<section class="doc" id="doc">
+<section class="text" id="doc">
 
     <h1 class="heading"> <span>Document</span> Translator </h1>
+    <form class="temp">
 
-    <form id="upload-document-form" name="upload-document-form" action="/app/uploadtotranslationcontainer" method="post" enctype="multipart/form-data" accept-charset="UTF-8" target="autodetectcontainer" class="dropzone">>
-
-        <div class="fallback">
-            <input type="file" id="input-file" name="input-file" value="file" accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.odp,.odt,.ods,.srt,.txt,.pdf" />
-            <input type="submit" value="Upload File!" class="btn">    
-        </div>
+    <div class="inputBox">
+        <h3 class="heading"> <u>comming <span>soon...</span></u></h3>
+    </div>
+    
         
 
     </form>
@@ -300,26 +294,27 @@ function showSlides() {
         </div>
 
         <textarea type="text" name="message" id="message" placeholder="Your Messages" class="msg" cols="30" rows="10"></textarea>
-        
-        
-        
 
         <input type="submit" value="send message" class="btn">
+        <h3>{{name}}</h3>
     </form>
 
 </section>
 
 <!-- contact section ends -->
-
+<br><br>
+<br><br>
 <!-- newsletter section starts  -->
 
 <section class="newsletter">
 
     <h3>subscribe us for latest updates!</h3>
 
-    <form  method="post">
-        <input class="box" type="email" placeholder="Enter your Email" >
-        <input type="submit" value="subscribe" class="btn1" name="sub2">
+    <form  method="post" action="/subscribe">
+        <input class="box" type="email" name="email" placeholder="Enter your Email" >
+        <input type="submit" value="subscribe" class="btn"><br>
+        <h4>{{email}}</h4>
+
         
         
 
@@ -328,7 +323,8 @@ function showSlides() {
 </section>
 
 <!-- newsletter section ends -->
-
+<br><br>
+<br><br>
 <!-- footer section starts  -->
 
 <section class="footer">
