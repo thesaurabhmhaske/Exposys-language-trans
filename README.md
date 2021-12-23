@@ -8,4 +8,4 @@ Experience Of Translating
 Your Sentences Into Different Languages!"
 
 
-This language translator is made By Saurabh Mhaske
+Designed By Saurabh Mhaske  | All Rights Reserved!
