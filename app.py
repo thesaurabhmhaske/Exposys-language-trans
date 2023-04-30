@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=["GET"])
 def index():
-    return render_template("index.html")
+    return render_template("templates/index.html")
 
 @app.route("/trans",methods=["GET", "POST"])
 def trans():
@@ -14,8 +14,8 @@ def trans():
      output = Translator().translate(t_sentence, dest=language)
      text = output.text
     else:
-        return render_template("home.html")
-    return render_template('home.html',output=text,sentence=t_sentence)
+        return render_template("templates/home.html")
+    return render_template('templates/home.html',output=text,sentence=t_sentence)
 
 @app.route("/contact",methods=["POST"])
 def contact():
@@ -29,7 +29,7 @@ def contact():
 @app.route("/subscribe",methods=["POST"])
 def subscribe():
     email = request.form['email']
-    return render_template('home.html',email=email)
+    return render_template('templates/home.html',email=email)
 
 if __name__ == '__main__':
     app.run(debug=True)
